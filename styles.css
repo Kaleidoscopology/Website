@@ -1,0 +1,236 @@
+/* General Styling */
+body {
+    margin: 0;
+    font-family: 'Karma', serif;
+    background-color: #f7f7f7;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Hero Section */
+#hero {
+    background-color: #0077b6;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    position: relative;
+    padding: 0 20px;
+}
+
+#hero .hero-content {
+    max-width: 700px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Adjusted Hero Logo with 3D Coin Effect */
+#hero-logo {
+    width: 2in; /* Adjust to 2" width */
+    height: 2in; /* Adjust to 2" height */
+    margin-bottom: 20px;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    animation: spin 6s ease-in-out, tremor 0.5s ease-out 6s; /* Spin for 6s (3 full rotations) and tremor after 6s */
+}
+
+/* 3D Effect: Simulate thickness of a coin */
+#hero-logo::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1); /* Add slight shadow */
+    transform: translateZ(-5px); /* Thickness of the coin (1/4") */
+}
+
+/* Spin Animation - 3 full rotations */
+@keyframes spin {
+    0% {
+        transform: rotateY(0deg);
+    }
+    100% {
+        transform: rotateY(1080deg); /* 1080deg = 3 full rotations */
+    }
+}
+
+/* Tremor Animation - Small shake after spin */
+@keyframes tremor {
+    0% {
+        transform: rotateY(1080deg) translateX(0);
+    }
+    25% {
+        transform: rotateY(1080deg) translateX(-3px);
+    }
+    50% {
+        transform: rotateY(1080deg) translateX(3px);
+    }
+    75% {
+        transform: rotateY(1080deg) translateX(-1px);
+    }
+    100% {
+        transform: rotateY(1080deg) translateX(0);
+    }
+}
+
+/* CTA Button */
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: #0077b6;
+    font-family: 'Teko', sans-serif;
+    font-size: 1.2rem;
+    text-decoration: none;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+.cta-button:hover {
+    background-color: #f1f8e9;
+}
+
+/* About Section */
+#about {
+    padding: 50px 20px;
+    background-color: #fff;
+    text-align: center;
+    margin-top: 0;
+}
+
+#about h2 {
+    font-family: 'Teko', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+#about p {
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Services Section */
+#services {
+    background-color: #e0f7fa;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#services h2 {
+    font-family: 'Teko', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.service {
+    margin-bottom: 40px;
+}
+
+.service h3 {
+    font-family: 'Teko', sans-serif;
+    font-size: 1.8rem;
+    color: #0077b6;
+}
+
+.service p {
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.service .cta-button {
+    margin-top: 10px;
+}
+
+/* Testimonials Section */
+#testimonials {
+    padding: 50px 20px;
+    background-color: #f1f8e9;
+    text-align: center;
+}
+
+#testimonials h2 {
+    font-family: 'Teko', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+#testimonials p {
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+    font-style: italic;
+}
+
+/* Contact Section */
+#contact {
+    padding: 50px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+#contact h2 {
+    font-family: 'Teko', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+#contact form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#contact input,
+#contact select,
+#contact textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    font-family: 'Karma', serif;
+}
+
+#contact button {
+    background-color: #0077b6;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    font-family: 'Teko', sans-serif;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#contact button:hover {
+    background-color: #005f87;
+}
+
+/* Footer */
+footer {
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    #hero h1 {
+        font-size: 2.5rem;
+    }
+
+    #services h2, #about h2, #contact h2 {
+        font-size: 2rem;
+    }
+
+    #hero p, #about p, .service p, #testimonials p {
+        font-size: 1rem;
+    }
+}

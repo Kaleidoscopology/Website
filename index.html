@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaleidoscopology LLC - Personalized Wellness</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Karma:wght@300;400;700&family=Teko:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header / Hero Section -->
+    <header id="hero">
+        <div class="hero-content">
+            <img src="images/kaleidoscopology-logo.png" alt="Kaleidoscopology Logo" class="logo" id="hero-logo">
+            <h1>Transform Your Health with Personalized Nutrition and Lifestyle Coaching</h1>
+            <p>Discover how our expert-driven programs can help you reset your metabolism, restore balance, and unlock your full potential.</p>
+            <a href="#contact" class="cta-button">Get Your Free Consultation</a>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>Why Kaleidoscopology?</h2>
+        <p>At Kaleidoscopology, we focus on optimizing your health through personalized, science-backed protocols that transform lives. By leveraging SNP testing, cold exposure, and lifestyle resets, we help you achieve lasting health and vitality.</p>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <h2>Our Transformative Programs</h2>
+        <div class="service">
+            <h3>Living Light Metabolic and Lifestyle Reset</h3>
+            <p>This comprehensive 10-12 week program is designed for busy professionals seeking safe, rapid, and permanent weight loss while improving metabolic health.</p>
+            <a href="#contact" class="cta-button">Join the Reset</a>
+        </div>
+        <div class="service">
+            <h3>Introductory Protocol</h3>
+            <p>Explore personalized wellness in a 6-week program including genomic testing and bi-weekly coaching to restore gut health and optimize nutrition.</p>
+            <a href="#contact" class="cta-button">Start Your Journey</a>
+        </div>
+        <div class="service">
+            <h3>Single Sessions</h3>
+            <p>Our single sessions provide targeted advice on specific health challenges, offering 1-on-1 consultations to empower your health decisions.</p>
+            <a href="#contact" class="cta-button">Book a Session</a>
+        </div>
+    </section>
+
+    <!-- Testimonials Section (Optional) -->
+    <section id="testimonials">
+        <h2>Success Stories</h2>
+        <p>“Kaleidoscopology transformed my health! The personalized approach made all the difference.”</p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Ready to Take the First Step?</h2>
+        <form action="submit_form.php" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <select name="interest" required>
+                <option value="General Question">General Question</option>
+                <option value="Living Light Reset">Living Light Reset</option>
+                <option value="Introductory Protocol">Introductory Protocol</option>
+                <option value="Single Session">Single Session</option>
+            </select>
+            <textarea name="goal" placeholder="What's your health goal?" required></textarea>
+            <button type="submit" class="cta-button">Book Your Free Consultation</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Kaleidoscopology LLC. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
